@@ -5,3 +5,13 @@
 	min-width: 100%;
 	min-height: 100%;
 }
+#controls{
+	position: fixed;
+	z-index: 9999;
+	color:white;
+	width: 10%;
+	height: 20%;
+	padding: 30px;
+	background-color: #33333399;
+	border-radius: 20px;
+}
