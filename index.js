@@ -5,10 +5,11 @@ var fail = document.getElementById('fail');
 var source = document.createElement('source');
 var cando = false;
 //source.setAttribute('src', 'joey_start.mp4');
+//webViewSettings.setMediaPlaybackRequiresUserGesture(false);
 
 //video.appendChild(source);
 video.src = "./joey_start.mp4"
-video.play();
+video.click();
 
 function levelended(){
 	failure();
@@ -19,7 +20,7 @@ setTimeout(function() {
     video.src ='./joey_l1_1.mp4'
 
     video.load();
-    video.play();
+    ////video.play();
     video.addEventListener('ended',levelended,false);
 	document.onkeydown = function (e) {
 	    if (!video.paused && e.keyCode === 32){
@@ -36,7 +37,7 @@ setTimeout(function() {
 
 function startgame(){
 	video.src = "./joey_start.mp4"
-	video.play();
+	//video.play();
 
 	setTimeout(function() {  
 	    video.pause();
@@ -44,7 +45,7 @@ function startgame(){
 	    video.src ='./joey_l1_1.mp4'
 
 	    video.load();
-	    video.play();
+	    //video.play();
     	video.addEventListener('ended',levelended,false);
 
 		document.onkeydown = function (e) {
@@ -69,7 +70,7 @@ function failure(){
     video.src ='./joey_fail.mp4'
 
     video.load();
-    video.play();
+    //video.play();
 	document.onkeydown = null;
 	setTimeout(function() {
 		startgame()
@@ -81,7 +82,7 @@ function level1_win(){
     video.src ='./joey_l1_1_win.mp4'
 
     video.load();
-    video.play();
+    //video.play();
 	document.onkeydown = null;
 	setTimeout(function() {
 		level2()
@@ -93,7 +94,7 @@ function level2(){
     video.src ='./joey_l1_2.mp4'
 
     video.load();
-    video.play();
+    //video.play();
     video.addEventListener('ended',levelended,false);
 
 	document.onkeydown = function (e) {
@@ -114,7 +115,7 @@ function level2_win(){
     video.src ='./joey_l1_2_win.mp4'
 
     video.load();
-    video.play();
+    //video.play();
 	document.onkeydown = null;
 	setTimeout(function() {
 		level3()
@@ -126,7 +127,7 @@ function level3(){
     video.src ='./joey_l1_3.mp4'
 
     video.load();
-    video.play();
+    //video.play();
     video.addEventListener('ended',levelended,false);
 
 	document.onkeydown = function (e) {
@@ -147,7 +148,7 @@ function level3_win(){
     video.src ='./joey_l1_3_win.mp4'
 
     video.load();
-    video.play();
+    //video.play();
 	document.onkeydown = null;
 	setTimeout(function() {
 		level4()
@@ -160,7 +161,7 @@ function level4(){
     video.src ='./joey_l1_4.mp4'
 
     video.load();
-    video.play();
+    //video.play();
 	document.onkeydown = function (e) {
 	    if (!video.paused && e.keyCode === 40){
 	    	console.log("Down")
@@ -179,7 +180,7 @@ function level4_win(){
     video.src ='./joey_l1_4_win.mp4'
 
     video.load();
-    video.play();
+    //video.play();
 	document.onkeydown = null;
 	setTimeout(function() {
 		level5()
@@ -192,7 +193,7 @@ function level5(){
     video.src ='./joey_l1_5.mp4'
 
     video.load();
-    video.play();
+    //video.play();
 	document.onkeydown = function (e) {
 	    if (!video.paused && e.keyCode === 38){
 	    	console.log("Up")
@@ -211,7 +212,7 @@ function level5_win(){
     video.src ='./joey_l1_5_win.mp4'
 
     video.load();
-    video.play();
+    //video.play();
 	document.onkeydown = null;
 	setTimeout(function() {
 		chapter1_end()
@@ -226,7 +227,7 @@ function chapter1_end(){
     video.src ='./joey_l1_end.mp4'
 
     video.load();
-    video.play();
+    //video.play();
 	document.onkeydown = null;
 	setTimeout(function() {
 		chapter1_end()
