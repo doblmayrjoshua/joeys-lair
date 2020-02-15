@@ -10,7 +10,7 @@ var cando = false;
 //video.appendChild(source);
 video.src = "./joey_start.mp4"
 video.load();
-//video.click();
+video.click();
 video.play();
 
 function levelended(){
