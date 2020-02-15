@@ -10,6 +10,9 @@ var cando = false;
 video.src = "./joey_start.mp4"
 video.play();
 
+function levelended(){
+	failure();
+}
 setTimeout(function() {  
     video.pause();
 
@@ -17,6 +20,7 @@ setTimeout(function() {
 
     video.load();
     video.play();
+    video.addEventListener('ended',levelended,false);
 	document.onkeydown = function (e) {
 	    if (!video.paused && e.keyCode === 32){
 	    	console.log("space")
@@ -41,6 +45,8 @@ function startgame(){
 
 	    video.load();
 	    video.play();
+    	video.addEventListener('ended',levelended,false);
+
 		document.onkeydown = function (e) {
 		    if (!video.paused && e.keyCode === 32){
 		    	console.log("space")
@@ -88,6 +94,8 @@ function level2(){
 
     video.load();
     video.play();
+    video.addEventListener('ended',levelended,false);
+
 	document.onkeydown = function (e) {
 	    if (!video.paused && e.keyCode === 38){
 	    	console.log("Up")
@@ -119,6 +127,8 @@ function level3(){
 
     video.load();
     video.play();
+    video.addEventListener('ended',levelended,false);
+
 	document.onkeydown = function (e) {
 	    if (!video.paused && e.keyCode === 38){
 	    	console.log("Up")
@@ -145,6 +155,7 @@ function level3_win(){
 }
 function level4(){
     video.pause();
+    video.addEventListener('ended',levelended,false);
 
     video.src ='./joey_l1_4.mp4'
 
@@ -176,6 +187,7 @@ function level4_win(){
 }
 function level5(){
     video.pause();
+    video.addEventListener('ended',levelended,false);
 
     video.src ='./joey_l1_5.mp4'
 
