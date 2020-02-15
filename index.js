@@ -11,6 +11,7 @@ var cando = false;
 video.src = "./joey_start.mp4"
 video.load();
 video.click();
+video.play();
 
 function levelended(){
 	failure();
